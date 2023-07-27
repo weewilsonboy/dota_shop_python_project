@@ -13,4 +13,6 @@ migrate = Migrate(app, db)
 from seed import seed
 app.cli.add_command(seed)
 
+from controllers.hero_controller import hero_blueprint
 
+app.register_blueprint(hero_blueprint)

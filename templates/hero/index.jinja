@@ -1,0 +1,7 @@
+{% extends 'base.jinja' %}
+{% block content %}
+    {% for hero in heroes %}
+        <h1>{{ hero.name }}</h1>
+        <br>
+    {% endfor %}
+{% endblock content %}
