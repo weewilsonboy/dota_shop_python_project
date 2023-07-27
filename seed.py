@@ -9,7 +9,11 @@ from flask.cli import with_appcontext
 @click.command(name='seed')
 @with_appcontext
 def seed():
-    
+    Hero.query.delete()
+    Item.query.delete()
+
+
+
     user1 = Hero(name="Axe", gold= 2000)
     user2 = Hero(name="Ancient Apparition",gold= 500)
     user3 = Hero(name="Bounty Hunter", gold= 42000)
