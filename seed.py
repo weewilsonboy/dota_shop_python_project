@@ -11,19 +11,26 @@ from flask.cli import with_appcontext
 def seed():
     Hero.query.delete()
     Item.query.delete()
+    Courier.query.delete()
 
 
 
-    user1 = Hero(name="Axe", gold= 2000)
-    user2 = Hero(name="Ancient Apparition",gold= 500)
-    user3 = Hero(name="Bounty Hunter", gold= 42000)
-    location1 = Item(image_locator="/static/images/tango.png", cost=90)
-    location2 = Item(image_locator="/satic/images/salve.png", cost=110)
+    hero1 = Hero(name="Axe", gold= 2000)
+    hero2 = Hero(name="Ancient Apparition",gold= 500)
+    hero3 = Hero(name="Bounty Hunter", gold= 42000)
+    item1 = Item(image_locator="/static/images/tango.png", cost=90)
+    item2 = Item(image_locator="/satic/images/salve.png", cost=110)
+    courier1 = Courier(hero_id=hero1.id, item_id=item1.id)
 
-    db.session.add(user1)
-    db.session.add(user2)
-    db.session.add(user3)
 
-    db.session.add(location1)
-    db.session.add(location2)
+
+    db.session.add(hero1)
+    db.session.add(hero2)
+    db.session.add(hero3)
+
+    db.session.add(item1)
+    db.session.add(item2)
+
+    db.session.add(courier1)
+
     db.session.commit()

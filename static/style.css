@@ -1,0 +1,12 @@
+.nav_ul {
+    background-color: magenta;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav_li {
+    background-color: chartreuse;
+    padding: 25px;
+    margin: 5px;
+}
