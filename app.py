@@ -14,5 +14,7 @@ from seed import seed
 app.cli.add_command(seed)
 
 from controllers.hero_controller import hero_blueprint
+from controllers.order_controller import order_blueprint
 
 app.register_blueprint(hero_blueprint)
+app.register_blueprint(order_blueprint)

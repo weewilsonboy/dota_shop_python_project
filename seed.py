@@ -18,9 +18,8 @@ def seed():
     hero1 = Hero(name="Axe", gold= 2000)
     hero2 = Hero(name="Ancient Apparition",gold= 500)
     hero3 = Hero(name="Bounty Hunter", gold= 42000)
-    item1 = Item(image_locator="/static/images/tango.png", cost=90)
-    item2 = Item(image_locator="/satic/images/salve.png", cost=110)
-    courier1 = Courier(hero_id=hero1.id, item_id=item1.id)
+    item1 = Item(name="Tango", image_locator="/static/images/tango.png", cost=90)
+    item2 = Item(name="Salve", image_locator="/satic/images/salve.png", cost=110)
 
 
 
@@ -30,6 +29,10 @@ def seed():
 
     db.session.add(item1)
     db.session.add(item2)
+
+    db.session.commit()
+
+    courier1 = Courier(hero_id=hero1.id, item_id=item1.id)
 
     db.session.add(courier1)
 

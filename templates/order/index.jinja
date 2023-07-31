@@ -1,0 +1,13 @@
+{% extends 'base.jinja' %}
+{% block content %}
+    <h1>Orders</h1>
+    <ul class="order_ul">
+        {% for courier in couriers %}
+        <li class="order_div">
+            <h2>{{ courier.hero.name }}</h2>
+            <img src="{{ courier.item.image_locator}}" alt="image of purchased item">
+            <br>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
