@@ -5,5 +5,10 @@
         <h2>{{ hero.name }}</h2>
         <p>{{hero.gold}}</p>
         <br>
+        {% for courier in couriers %}
+            {% if hero.id == courier.hero_id %}
+                <img src="{{courier.item.image_locator}}" alt="an item this hero owns">
+            {% endif %}
+        {% endfor %}
     {% endfor %}
 {% endblock content %}
