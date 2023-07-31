@@ -6,8 +6,8 @@
         <p>{{hero.gold}}</p>
         <br>
         {% for courier in couriers %}
-            {% if hero.id == courier.hero_id %}
-                <img src="{{courier.item.image_locator}}" alt="an item this hero owns">
+            {% if hero.id == courier.hero_id and courier.sold == false %}
+                <a href="/sale/{{courier.id}}"><img src="{{courier.item.image_locator}}" alt="an item this hero owns"></a>
             {% endif %}
         {% endfor %}
     {% endfor %}
