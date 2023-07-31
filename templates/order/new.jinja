@@ -6,7 +6,7 @@
     <label class="form_label" for="hero_name">Hero Name</label></li>
     <li><select name="hero_name" id="hero_name">
         {% for hero in heroes %}
-            <option value="{{hero.name}}">{{hero.name}}: {{hero.gold}}</option>
+            <option value="{{hero.name}}">{{hero.name}}: ({{hero.gold}} gold)</option>
         {% endfor %}
     </select></li><li>
     <label class="form_label" for="item_name">Item</label></li>
