@@ -8,6 +8,12 @@ from app import db
 order_blueprint = Blueprint("order", __name__)
 
 
+@order_blueprint.route('/')
+def homepage():
+    couriers = Courier.query.all()
+    
+    return render_template('/order/index.jinja', couriers = couriers)
+
 @order_blueprint.route('/order')
 def order_page():
     couriers = Courier.query.all()
@@ -20,6 +26,10 @@ def order_confirm():
     order_hero = Hero.query.filter_by(name = hero_name).first()
     item_name = request.form['item_name']
     order_item = Item.query.filter_by(name = item_name).first()
+    if order_item.cost > order_hero.gold:
+        return f"Not enough gold for {order_hero.name} to buy {order_item.name}"
+    order_hero.gold -= order_item.cost
+
     courier = Courier(hero_id = order_hero.id, item_id = order_item.id)
     db.session.add(courier)
     db.session.commit()
