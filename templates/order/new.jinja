@@ -1,0 +1,21 @@
+{% extends "base.jinja" %}
+{% block content %}
+    <form action="/order", method="post">
+    <label for="hero_name">Hero Name</label>
+    <select name="hero_name" id="hero_name">
+        {% for hero in heroes %}
+            <option value="{{hero.name}}">{{hero.name}}</option>
+        {% endfor %}
+    </select>
+    <label for="item_name">Item</label>
+    <select name="item_name" id="item_name">
+        {% for item in items %}
+            <option value="{{item.name}}">{{item.name}}: {{item.cost}}</option>
+        {% endfor %}
+    </select>
+    
+    <button type="submit">Confirm Purchase</button>
+    </form>
+
+
+{% endblock content %}
