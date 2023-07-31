@@ -19,7 +19,7 @@ def seed():
     hero2 = Hero(name="Ancient Apparition",gold= 500)
     hero3 = Hero(name="Bounty Hunter", gold= 42000)
     item1 = Item(name="Tango", image_locator="/static/images/tango.png", cost=90)
-    item2 = Item(name="Salve", image_locator="/satic/images/salve.png", cost=110)
+    item2 = Item(name="Salve", image_locator="/static/images/salve.png", cost=110)
 
 
 
