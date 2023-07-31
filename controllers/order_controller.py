@@ -12,7 +12,7 @@ order_blueprint = Blueprint("order", __name__)
 def homepage():
     couriers = Courier.query.all()
     
-    return render_template('/order/index.jinja', couriers = couriers)
+    return render_template('/index.jinja', couriers = couriers)
 
 @order_blueprint.route('/order')
 def order_page():

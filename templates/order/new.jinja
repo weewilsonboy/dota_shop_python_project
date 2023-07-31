@@ -1,21 +1,23 @@
 {% extends "base.jinja" %}
 {% block content %}
-    <form action="/order", method="post">
-    <label for="hero_name">Hero Name</label>
-    <select name="hero_name" id="hero_name">
+<ul class="purchase_form">
+    <form action="/order", method="post" >
+    <li>
+    <label class="form_label" for="hero_name">Hero Name</label></li>
+    <li><select name="hero_name" id="hero_name">
         {% for hero in heroes %}
-            <option value="{{hero.name}}">{{hero.name}}</option>
+            <option value="{{hero.name}}">{{hero.name}}: {{hero.gold}}</option>
         {% endfor %}
-    </select>
-    <label for="item_name">Item</label>
-    <select name="item_name" id="item_name">
+    </select></li><li>
+    <label class="form_label" for="item_name">Item</label></li>
+    <li><select name="item_name" id="item_name">
         {% for item in items %}
             <option value="{{item.name}}">{{item.name}}: {{item.cost}}</option>
         {% endfor %}
     </select>
-    
-    <button type="submit">Confirm Purchase</button>
+    </li><li>
+    <button type="submit">Confirm Purchase</button></li>
     </form>
-
+</ul>
 
 {% endblock content %}

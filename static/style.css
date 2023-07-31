@@ -1,36 +1,141 @@
 * {
-    margin: 0;
-    border: 0;
+    margin: 0px;
+    border: 0px;
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+
+
+
+.hero{
+    color: red;
+    display: flex;
+    justify-content: center;
+
+}
+
+.link_hub {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px;
+    justify-content: space-around;
+    /* width: 55%; */
 }
 
 
 .nav_ul {
-    background-color: magenta;
-    list-style-type: none;
+    background-color: rgba(200, 12, 12, 0.726);
+    
     display: flex;
     justify-content: flex-start;
 }
 
+
+
 .nav_li {
-    background-color: chartreuse;
+    background-color: rgba(36, 34, 63, 0.719);
     padding: 25px;
     margin: 5px;
 }
 
+
+.nav_li a{
+    color: rgba(176, 242, 184, 0.74);
+}
+
 .order_ul {
     list-style-type: none;
+    list-style-position: inside;
     display: flex;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
+    background-color: blue;
+    padding: 0px;
 
 }
 
 .order_li {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 15px;
+    justify-content: center;
+    background-color: green;
+    margin-top: 15px;
     align-items: center;
-    width: 20%;
+    width: 50%;
+    height: 120px;
     
+}
+
+.container_hero{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    background-color: green;
+    margin-top: 15px;
+    padding: 0px;
+}
+
+.hero_ul {
+    list-style-type: none;
+    list-style-position: inside;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    background-color: blue;
+    padding: 0px;
+}
+
+.hero_li {
+    display: flex;
+    background-color: purple;
+    margin-top: 15px;
+    justify-content: center;
+    width: 55%;
+
+}
+
+.hero_ul b{
+    font-weight: 800;
+    font-size: xx-large;
+}
+
+.hero_ul p{
+    color: gold;
+    font-size: medium;
+    font-weight: 400;
+}
+
+.new_order {
+    display: flex;
+    justify-content: center;
+    color: blue;
+
+}
+
+.purchase_form {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: chocolate;
+}
+
+.form_label {
+    color: aqua;
+    justify-content: center;
+    font-size: x-large;
+    font-weight: 600;
+    background-color: red;
+}
+
+.purchase_form li{
+    display: flex;
+    background-color: purple;
+    margin-top: 15px;
+    justify-content: center;
 }

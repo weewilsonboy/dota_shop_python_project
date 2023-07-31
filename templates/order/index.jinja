@@ -1,14 +1,17 @@
 {% extends 'base.jinja' %}
 {% block content %}
-    <h1>Orders</h1>
+    <h1 class="hero">Orders</h1>
+    <a href="/order/new" class="new_order">New Order</a>
     <ul class="order_ul">
         {% for courier in couriers %}
         <li class="order_li">
             <h2>{{ courier.hero.name }}</h2>
+        </li>
+        <li class="order_li">
             <img src="{{ courier.item.image_locator}}" alt="image of purchased item">
             <br>
         </li>
         {% endfor %}
     </ul>
-    <a href="/order/new">New Order</a>
+    
 {% endblock content %}

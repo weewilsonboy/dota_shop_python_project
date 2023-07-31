@@ -20,7 +20,7 @@ def seed():
     hero3 = Hero(name="Bounty Hunter", gold= 42000)
     item1 = Item(name="Tango", image_locator="/static/images/tango.png", cost=90)
     item2 = Item(name="Salve", image_locator="/static/images/salve.png", cost=110)
-
+    item3 = Item(name="Clarity", image_locator="/static/clarity.png", cost=50)
 
 
     db.session.add(hero1)

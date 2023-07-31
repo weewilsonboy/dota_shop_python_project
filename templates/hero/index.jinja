@@ -1,14 +1,25 @@
 {% extends 'base.jinja' %}
 {% block content %}
-    <h1>Heroes</h1>
+    <h1 class="hero">Heroes</h1>
     {% for hero in heroes %}
-        <h2>{{ hero.name }}</h2>
-        <p>{{hero.gold}}</p>
+        <ul class="container_hero">
+        <div class="hero_ul">
+        <li><b>{{ hero.name }} :</b><p> {{hero.gold}} Gold</p>
+        </li>
+        </div>
         <br>
+        <li>
+        <ul class="hero_ul">
         {% for courier in couriers %}
+            
             {% if hero.id == courier.hero_id and courier.sold == false %}
-                <a href="/sale/{{courier.id}}"><img src="{{courier.item.image_locator}}" alt="an item this hero owns"></a>
+            <li class="hero_li">
+                <a href="/sale/{{courier.id}}"><img src="{{courier.item.image_locator}}" alt="an item this hero owns"></a></li>
             {% endif %}
+            
         {% endfor %}
+        </ul>
+        </li>
+        </ul>
     {% endfor %}
 {% endblock content %}
