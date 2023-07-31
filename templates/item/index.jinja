@@ -1,0 +1,13 @@
+{% extends 'base.jinja' %}
+{% block content %}
+    <h1 class="hero">Items</h1>
+    
+
+    <ul class="item_list">
+    {% for item in items %}
+        <li class="item_item">
+        <img src="{{item.image_locator}}" alt="{{item.name}}" title="{{item.name}}: {{item.cost}} gold">
+        </li>
+    {% endfor %}
+    </ul> 
+{% endblock content %}

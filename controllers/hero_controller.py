@@ -3,7 +3,6 @@ from flask import Blueprint
 from models.courier import Courier
 from models.hero import Hero
 from models.item import Item
-from models.courier import Courier
 from app import db
 
 hero_blueprint = Blueprint("hero", __name__)
