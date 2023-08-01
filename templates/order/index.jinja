@@ -1,6 +1,9 @@
 {% extends 'base.jinja' %}
 {% block content %}
     <h1 class="hero">Orders</h1>
+    {% if error_msg != "" %}
+        <h2 class="error">!!! {{error_msg}} !!!</h2>
+    {% endif %}
     <a href="/order/new" class="new_order">New Order</a>
     <ul class="order_ul">
         {% for courier in couriers %}

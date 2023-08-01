@@ -225,3 +225,10 @@
     padding: 1%;
     background-color: black;
 }
+
+.error {
+    color: beige;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}

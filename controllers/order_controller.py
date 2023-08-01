@@ -18,8 +18,7 @@ def homepage():
 def order_page():
     couriers = Courier.query.all()
     
-    return render_template('/order/index.jinja', couriers = couriers)
-
+    return render_template('/order/index.jinja', couriers = couriers, error_msg = "")
 @order_blueprint.route('/order', methods=["POST"])
 def order_confirm():
     hero_name = request.form['hero_name']
@@ -27,9 +26,19 @@ def order_confirm():
     item_name = request.form['item_name']
     order_item = Item.query.filter_by(name = item_name).first()
     if order_item.cost > order_hero.gold:
-        return f"Not enough gold for {order_hero.name} to buy {order_item.name}"
+        return render_template('/order/index.jinja', couriers = Courier.query.all(), error_msg = f"Not enough gold for {hero_name} to buy {item_name}")
     order_hero.gold -= order_item.cost
 
+    couriers = Courier.query.all()
+    backpack_slots_filled = 0
+    for courie in couriers:
+        if courie.hero_id == order_hero.id and courie.sold == False:
+            backpack_slots_filled += 1
+
+    if backpack_slots_filled >= 6:
+        return render_template('/order/index.jinja', couriers = Courier.query.all(), error_msg = f"Not enough inventory space for {hero_name} to buy {item_name}")
+    
+    
     courier = Courier(hero_id = order_hero.id, item_id = order_item.id)
     db.session.add(courier)
     db.session.commit()
