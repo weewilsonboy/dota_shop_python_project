@@ -20,7 +20,7 @@ def item_sale(id):
     courier_to_edit = Courier.query.get(id)
     item_being_sold = Item.query.get(courier_to_edit.item.id)
     hero_selling = Hero.query.get(courier_to_edit.hero.id)
-    hero_selling.gold += (item_being_sold.cost/2)
+    hero_selling.gold += (item_being_sold.cost//2)
     courier_to_edit.sold = True
     db.session.commit()
     return redirect('/hero')
