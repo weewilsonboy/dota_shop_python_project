@@ -52,7 +52,7 @@ def seed():
     db.session.add(item13)
 
     db.session.commit()
-
+    hero1.items_held +=1
     courier1 = Courier(hero_id=hero1.id, item_id=item1.id)
 
     db.session.add(courier1)

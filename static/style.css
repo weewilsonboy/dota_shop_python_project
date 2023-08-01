@@ -236,3 +236,7 @@
     display: flex;
     justify-content: center;
 }
+
+.backpack {
+    filter: sepia(100%);
+}

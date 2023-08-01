@@ -8,6 +8,7 @@ class Hero(db.Model):
     id = db.Column(UUID(as_uuid = True), primary_key = True, default=uuid.uuid4)
     name = db.Column(db.String(64))
     gold = db.Column(db.Integer)
+    items_held = db.Column(db.Integer, server_default = '0')
     couriers = db.relationship('Courier', backref='hero')
 
     

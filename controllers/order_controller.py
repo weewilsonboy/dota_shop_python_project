@@ -29,15 +29,11 @@ def order_confirm():
         return render_template('/order/index.jinja', couriers = Courier.query.all(), error_msg = f"Not enough gold for {hero_name} to buy {item_name}")
     order_hero.gold -= order_item.cost
 
-    couriers = Courier.query.all()
-    backpack_slots_filled = 0
-    for courie in couriers:
-        if courie.hero_id == order_hero.id and courie.sold == False:
-            backpack_slots_filled += 1
-
-    if backpack_slots_filled >= 6:
-        return render_template('/order/index.jinja', couriers = Courier.query.all(), error_msg = f"Not enough inventory space for {hero_name} to buy {item_name}")
     
+
+    if order_hero.items_held >= 9:
+        return render_template('/order/index.jinja', couriers = Courier.query.all(), error_msg = f"Not enough inventory space for {hero_name} to buy {item_name}")
+    order_hero.items_held += 1
     
     courier = Courier(hero_id = order_hero.id, item_id = order_item.id)
     db.session.add(courier)
