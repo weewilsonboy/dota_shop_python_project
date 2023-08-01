@@ -3,6 +3,8 @@
     border: 0px;
     list-style-type: none;
     list-style-position: inside;
+    background-color: grey;
+    color: bisque;
 }
 
 
@@ -29,19 +31,21 @@
     
     display: flex;
     justify-content: flex-start;
+    margin: 0px;
 }
 
 
 
 .nav_li {
-    background-color: rgba(36, 34, 63, 0.719);
+    background-color:black;
     padding: 25px;
-    margin: 5px;
+    margin: 0px 2px 0px 2px;
 }
 
 
 .nav_li a{
-    color: rgba(176, 242, 184, 0.74);
+    color: beige;
+    background-color: black;
 }
 
 .order_ul {
@@ -51,7 +55,6 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    background-color: blue;
     padding: 0px;
 
 }
@@ -59,7 +62,6 @@
 .order_li {
     display: flex;
     justify-content: center;
-    background-color: green;
     margin-top: 15px;
     align-items: center;
     width: 50%;
@@ -74,7 +76,6 @@
     justify-content: center;
     width: 100%;
     flex-direction: column;
-    background-color: green;
     margin-top: 15px;
     padding: 0px;
 }
@@ -86,16 +87,14 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    background-color: blue;
     padding: 0px;
 }
 
 .hero_li {
     display: flex;
-    background-color: purple;
     margin-top: 15px;
     justify-content: center;
-    width: 55%;
+    width: 33%;
 
 }
 
@@ -107,13 +106,14 @@
 .hero_ul p{
     color: gold;
     font-size: medium;
+    display: flex;
     font-weight: 400;
+    justify-content: center;
 }
 
 .new_order {
     display: flex;
     justify-content: center;
-    color: blue;
 
 }
 
@@ -122,22 +122,28 @@
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: chocolate;
 }
 
 .form_label {
-    color: aqua;
+    color: red;
     justify-content: center;
     font-size: x-large;
     font-weight: 600;
-    background-color: red;
 }
 
 .purchase_form li{
     display: flex;
-    background-color: purple;
+    
     margin-top: 15px;
     justify-content: center;
+}
+
+.purchase_form select {
+    background-color: rgba(56, 54, 54, 0.726);
+}
+
+.purchase_form button {
+    background-color:rgba(56, 54, 54, 0.726);
 }
 
 .item_list {
@@ -148,7 +154,6 @@
     justify-content: flex-start;
     align-content: space-around;
     width: 100%;
-    background-color: blue;
     padding: 0px;
     margin: 0px;
 }
@@ -156,7 +161,6 @@
 .item_item {
     justify-content: space-around;
     padding: 5px;
-    background-color: pink;
 }
 
 

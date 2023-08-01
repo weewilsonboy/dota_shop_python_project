@@ -10,6 +10,7 @@
         {% endfor %}
     </select></li><li>
     <label class="form_label" for="item_name">Item</label></li>
+
     <li><select name="item_name" id="item_name">
         {% for item in items %}
             <option value="{{item.name}}">{{item.name}}: {{item.cost}}</option>
