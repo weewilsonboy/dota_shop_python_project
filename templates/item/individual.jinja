@@ -1,23 +1,23 @@
 {% extends 'base.jinja' %}
 {% block content %}
     <h2 class="item_header">{{item.name}}</h2>
-
     <ul class="item_container">
+    <div class="item_container_holder">
         <li class="item_container_left"><img src="{{item.image_locator}}" alt="Image of {{item.name}}">
         </li>
         <li class="item_container_right">
             <ul class="item_description">
                 <li class="item_description_cost">
-                <p> Cost: {{item.cost}}</p>
+                <p class="cost_title">Cost: </p><p class="cost_cost">{{item.cost}}</p>
                 </li>
                 <li class="item_description_description">
-                <p>Description: {{item.description}}</p>
+                <p class="description_text_">Description: </p><p class="description_text">{{item.description}}</p>
                 </li>
         
         
             </ul>
         </li>
-    
+    </div>
     
     
     </ul>

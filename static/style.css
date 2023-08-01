@@ -158,3 +158,70 @@
     padding: 5px;
     background-color: pink;
 }
+
+
+.item_container{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    background-color: green;
+    padding: 0px;
+}
+
+.item_container_holder {
+    display: flex;
+    justify-content: center;
+    background-color: blue;
+    width: 25%;
+    align-items: center;
+}
+
+
+.item_container_left {
+    background-color: fuchsia;
+}
+
+.item_container_right {
+    background-color: orange;
+}
+
+.item_description {
+    background-color: aliceblue;
+}
+
+.item_description_cost {
+    margin: 15px;
+}
+
+.item_description_description {
+    margin: 15px;
+}
+
+.description_text_ {
+    font-size: large;
+}
+
+.description_text {
+    font-style: italic;
+    font-size: medium;
+}
+.cost_title{
+    font-size: large;
+    font-weight: 600;
+}
+.cost_cost{
+    color: gold;
+    font-size: medium;
+    font-weight: 400;
+}
+
+.item_header {
+    color: bisque;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    background-color: black;
+}
