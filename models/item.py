@@ -9,6 +9,7 @@ class Item(db.Model):
     name = db.Column(db.String(64))
     image_locator = db.Column(db.String(64))
     cost = db.Column(db.Integer)
+    description = db.Column(db.Text)
     couriers = db.relationship('Courier', backref='item')
 
 

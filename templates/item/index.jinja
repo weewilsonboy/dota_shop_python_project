@@ -6,7 +6,7 @@
     <ul class="item_list">
     {% for item in items %}
         <li class="item_item">
-        <img src="{{item.image_locator}}" alt="{{item.name}}" title="{{item.name}}: {{item.cost}} gold">
+        <a href="/items/{{item.id}}"><img src="{{item.image_locator}}" alt="{{item.name}}" title="{{item.name}}: {{item.cost}} gold"></a>
         </li>
     {% endfor %}
     </ul> 
