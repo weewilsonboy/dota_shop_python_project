@@ -3,7 +3,7 @@
     border: 0px;
     list-style-type: none;
     list-style-position: inside;
-    background-color: grey;
+    background-color: rgb(64, 64, 64);
     color: bisque;
 }
 
@@ -14,6 +14,7 @@
     color: red;
     display: flex;
     justify-content: center;
+    padding: 15px;
 
 }
 
@@ -66,7 +67,11 @@
     align-items: center;
     width: 50%;
     height: 120px;
-    
+    background-color: rgba(0, 0, 0, 0.082);
+}
+
+.order_li h2 {
+    background-color:transparent;
 }
 
 .container_hero{
@@ -171,55 +176,60 @@
     justify-content: center;
     align-items: start;
     width: 100%;
-    background-color: green;
     padding: 0px;
 }
 
 .item_container_holder {
     display: flex;
     justify-content: center;
-    background-color: blue;
     width: 25%;
     align-items: center;
 }
 
 
-.item_container_left {
-    background-color: fuchsia;
-}
+
 
 .item_container_right {
-    background-color: orange;
 }
 
 .item_description {
-    background-color: aliceblue;
 }
 
 .item_description_cost {
     margin: 15px;
+    background-color: transparent;
 }
 
 .item_description_description {
     margin: 15px;
+    background-color: transparent;
+
 }
 
 .description_text_ {
     font-size: large;
+    background-color: transparent;
+
 }
 
 .description_text {
     font-style: italic;
     font-size: medium;
+    background-color: transparent;
+
 }
 .cost_title{
-    font-size: large;
-    font-weight: 600;
+    font-size: larger;
+    font-weight: 800;
+    background-color: transparent;
+
 }
 .cost_cost{
     color: gold;
-    font-size: medium;
-    font-weight: 400;
+    font-size: large;
+    font-weight: 600;
+    background-color: transparent;
+
 }
 
 .item_header {
@@ -227,7 +237,8 @@
     display: flex;
     justify-content: center;
     padding: 1%;
-    background-color: black;
+    background-color: rgba(29, 28, 28, 0.493);
+
 }
 
 .error {
@@ -239,4 +250,10 @@
 
 .backpack {
     filter: sepia(100%);
+}
+
+.button {
+    margin: 1px;
+    border: 5px;
+    background-color: black;
 }
