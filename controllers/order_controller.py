@@ -53,4 +53,4 @@ def order_confirm():
 
 @order_blueprint.route('/order/new')
 def new_order():
-    return render_template('/order/new.jinja', heroes = Hero.query.order_by(Hero.name).all(), items = Item.query.all())
+    return render_template('/order/new.jinja', heroes = Hero.query.order_by(Hero.name).all(), items = Item.query.order_by(Item.name))

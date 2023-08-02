@@ -7,8 +7,14 @@
     color: bisque;
 }
 
+body {
+    font-size: 30px;
+}
 
-
+select {
+    padding: 15px;
+    font-size: large;
+}
 
 .hero{
     color: red;
@@ -132,8 +138,7 @@
 .form_label {
     color: red;
     justify-content: center;
-    font-size: x-large;
-    font-weight: 600;
+    font-size: 150%;
 }
 
 .purchase_form li{
@@ -145,10 +150,12 @@
 
 .purchase_form select {
     background-color: rgba(56, 54, 54, 0.726);
+    padding: 15px;
 }
 
 .purchase_form button {
     background-color:rgba(56, 54, 54, 0.726);
+    padding: 15px;
 }
 
 .item_list {
@@ -249,11 +256,13 @@
 .button {
     margin: 1px;
     border: 5px;
+    padding: 15px;
     background-color: black;
 }
 
 .number {
     background-color: beige;
+    padding: 15px;
     color: black;
 }
 
