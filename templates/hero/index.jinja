@@ -10,7 +10,7 @@
         <br>
         <li>
         <ul class="hero_ul">
-        {% for courier in couriers %}
+        {% for courier in couriers if courier.hero_id == hero.id %}
             
             {% if hero.id == courier.hero_id and courier.sold == false %}
             
