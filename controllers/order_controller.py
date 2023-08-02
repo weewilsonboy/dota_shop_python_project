@@ -35,13 +35,14 @@ def order_confirm():
 
     if order_item.cost * number > order_hero.gold:
         return render_template('/order/index.jinja', couriers = Courier.query.all(), error_msg = f"Not enough gold for {hero_name} to buy {number} {item_name}(s)")
-    order_hero.gold -= order_item.cost
+    
 
     
     
     while number > 0:
         order_hero.items_held += 1
         courier = Courier(hero_id = order_hero.id, item_id = order_item.id)
+        order_hero.gold -= order_item.cost
         db.session.add(courier)
         number -= 1
     db.session.commit()
