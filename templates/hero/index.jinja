@@ -13,15 +13,16 @@
         {% for courier in couriers %}
             
             {% if hero.id == courier.hero_id and courier.sold == false %}
-            {% if loop.index0 > 6 %}
-            <li class="hero_li">
-                <a href="/sale/{{courier.id}}"><img src="{{courier.item.image_locator}}" alt="an item this hero owns" class="backpack"></a>
-            </li>
-            {% else %}
-            <li class="hero_li">
-                <a href="/sale/{{courier.id}}"><img src="{{courier.item.image_locator}}" alt="an item this hero owns"></a>
-            </li>
-            {% endif %}
+            
+                {% if loop.index0 < 6 %}
+                    <li class="hero_li">
+                        <a href="/sale/{{courier.id}}"><img src="{{courier.item.image_locator}}" alt="an item this hero owns" title="{{courier.item.name}}: Sell for {{courier.item.cost//2}} gold"></a>
+                    </li>
+                {% else %}
+                    <li class="hero_li">
+                        <a href="/sale/{{courier.id}}"><img src="{{courier.item.image_locator}}" alt="an item this hero owns in their backpack" class="backpack" title="{{courier.item.name}}: Sell for {{courier.item.cost//2}} gold"></a>
+                    </li>
+                {% endif %}
             
             {% endif %}
             

@@ -1,0 +1,20 @@
+{% extends 'base.jinja' %}
+
+{% block content %}
+    <ul class="edit_form">
+        <li class="edit_title">
+            <h2 class="item_header">{{item.name}}</h2>
+        </li>
+        <form action="/items/edit/{{item.id}}", method="post">
+        <li class="edit_number">
+            
+                <label for="price">New Price</label>
+                    <input type="number" name="price" id="price" class="number" value="{{item.cost}}" min="0">
+        </li>
+        <li class="edit_button">
+            <button type="submit" class="button">Confirm</button>
+        </li>
+        </form>
+        
+    </ul>
+{% endblock content %}

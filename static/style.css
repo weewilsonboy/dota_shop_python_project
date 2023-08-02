@@ -189,12 +189,6 @@
 
 
 
-.item_container_right {
-}
-
-.item_description {
-}
-
 .item_description_cost {
     margin: 15px;
     background-color: transparent;
@@ -256,4 +250,30 @@
     margin: 1px;
     border: 5px;
     background-color: black;
+}
+
+.number {
+    background-color: beige;
+    color: black;
+}
+
+.edit_form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.edit_title {
+    justify-content: center;
+    min-width: 25%;
+}
+
+.edit_number {
+    justify-content: center;
+}
+
+.edit_button {
+    display: flex;
+    justify-content: center;
 }
